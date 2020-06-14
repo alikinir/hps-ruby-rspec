@@ -5,9 +5,9 @@ require_relative 'actionwords'
 describe 'Bad usage' do
   include Actionwords
 
-  it "Full grounds does not block coffee" do
+  it "Full grounds does not block coffee (uid:de726dd8-ce28-4ff2-bebe-b9d6074156a8)" do
     # You keep getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
-    # Tags: priority:2
+    # Tags: priority:low
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # And I handle everything except the grounds

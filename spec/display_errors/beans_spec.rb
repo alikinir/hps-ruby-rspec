@@ -12,16 +12,18 @@ describe 'Beans' do
     i_handle_everything_except_the_beans
   end
 
-  it "Message \"Fill beans\" is displayed after 38 coffees are taken" do
-    # Tags: priority:0
-    # When I take "38" coffees
-    i_take_coffee_number_coffees(38)
-    # Then message "Fill beans" should be displayed
-    message_message_should_be_displayed("Fill beans")
+  it "After adding beans, the message \"Fill beans\" disappears (uid:9ef17072-983a-4b7e-bb8a-5d95135bcb16)" do
+    # Tags: priority:high
+    # When I take "40" coffees
+    i_take_coffee_number_coffees(40)
+    # And I fill the beans tank
+    i_fill_the_beans_tank
+    # Then message "Ready" should be displayed
+    message_message_should_be_displayed("Ready")
   end
 
-  it "It is possible to take 40 coffees before there is really no more beans" do
-    # Tags: priority:2
+  it "It is possible to take 40 coffees before there is really no more beans (uid:47bf164d-b002-41fb-8d8f-fae59d2e0e5e)" do
+    # Tags: priority:low
     # When I take "40" coffees
     i_take_coffee_number_coffees(40)
     # Then coffee should be served
@@ -34,13 +36,11 @@ describe 'Beans' do
     message_message_should_be_displayed("Fill beans")
   end
 
-  it "After adding beans, the message \"Fill beans\" disappears" do
-    # Tags: priority:0
-    # When I take "40" coffees
-    i_take_coffee_number_coffees(40)
-    # And I fill the beans tank
-    i_fill_the_beans_tank
-    # Then message "Ready" should be displayed
-    message_message_should_be_displayed("Ready")
+  it "Message \"Fill beans\" is displayed after 38 coffees are taken (uid:cd659390-99a2-4c4d-b88b-e237e515a036)" do
+    # Tags: priority:high
+    # When I take "38" coffees
+    i_take_coffee_number_coffees(38)
+    # Then message "Fill beans" should be displayed
+    message_message_should_be_displayed("Fill beans")
   end
 end

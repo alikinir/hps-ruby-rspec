@@ -5,9 +5,9 @@ require_relative 'actionwords'
 describe 'Serve coffee' do
   include Actionwords
 
-  it "Simple use" do
+  it "Simple use (uid:6b0f9278-29ee-4da2-86ba-b7a68b375e5d)" do
     # Well, sometimes, you just get a coffee.
-    # Tags: priority:0
+    # Tags: priority:high
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I take a coffee
