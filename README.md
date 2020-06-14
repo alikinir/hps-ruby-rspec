@@ -36,3 +36,11 @@ To build the project and run the tests, use the following command:
 The SUT implementation can be seen in [``src/coffee_machine.rb``](https://github.com/hiptest/hps-ruby-rspec/blob/master/src/coffee_machine.rb)
 
 The test report is generated in ```report.xml```
+
+
+Publish results
+--------------
+
+To publish results to the hiptest, use the following command:
+
+    hiptest-publisher --config-file  rspec.conf --push report.xml --test-run-id 419717 --push-format junit
